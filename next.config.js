@@ -1,12 +1,14 @@
 async function getRewrites() {
   const rewrites = [
     {
-      source: "/over-ons", // url that the user visits
+      source: "/nl/over-ons", // url that the user visits
       destination: "/about", // the route that is rendered
+      locale: false, // Use `locale: false` so that the prefix matches the desired locale correctly
     },
     {
-      source: "/a-propos",
+      source: "/fr/a-propos",
       destination: "/about",
+      locale: false,
     },
     {
       source: "/about",
@@ -29,7 +31,7 @@ const nextConfig = {
     return getRewrites();
   },
 
-  // This doesn't work at all
+  // This doesn't work at all, you get a 404
   serverRuntimeConfig: {
     async rewrites() {
       return getRewrites();
