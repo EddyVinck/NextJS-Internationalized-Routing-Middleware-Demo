@@ -2,6 +2,8 @@
 
 See the [NextJS internationalized routing discussion](https://github.com/vercel/next.js/discussions/18485#discussioncomment-3731075) on GitHub.
 
+Demo deployed on Vercel: https://next-js-internationalized-routing-middleware-demo.vercel.app/
+
 This is an attempt to have the same functionality as NuxtJS i18n configs as discussed in the discussion above.
 
 ## Why?
@@ -24,6 +26,9 @@ Relevant Next.js documentation:
 ## What's not in this demo
 
 - Dynamic routes
+- Language switch
+- `<link rel="alternate" hreflang="lang_code" href="url_of_page" />` in the `<head>` tag
+- Any other i18n markup you might need
 
 ## Ideas that have been tried
 

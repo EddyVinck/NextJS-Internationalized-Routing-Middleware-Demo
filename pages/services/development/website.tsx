@@ -16,7 +16,7 @@ export default function ServicesDevelopmentWebsite(props: {
       <Navbar />
 
       <main>
-        <h1>Services/Development/Website template</h1>
+        <h1>Services / Development / Website template</h1>
         <p>Locale: {props.locale}</p>
       </main>
     </div>

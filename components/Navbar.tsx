@@ -1,16 +1,6 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { SyntheticEvent } from "react";
 
 export const Navbar = () => {
-  const router = useRouter();
-  const { locale } = router;
-
-  const changeLocale = (e: SyntheticEvent<HTMLSelectElement>) => {
-    const locale = e.currentTarget.value;
-    router.push(router.pathname, router.asPath, { locale });
-  };
-
   return (
     <header>
       <h1
@@ -20,15 +10,9 @@ export const Navbar = () => {
       >
         Next.js Middleware i18n Routing Demo
       </h1>
-
-      <div>
-        <h2>Change locale</h2>
-        <select value={locale} onChange={changeLocale}>
-          <option value="en">English</option>
-          <option value="fr">French</option>
-          <option value="nl">Dutch</option>
-        </select>
-      </div>
+      <a href="https://github.com/EddyVinck/NextJS-Internationalized-Routing-Middleware-Demo">
+        GitHub
+      </a>
 
       <nav
         style={{
