@@ -1,20 +1,48 @@
-# Next.js Runtime Config i18n Rewrites
+# Next.js Internationalized Routing Middleware Demo
 
-https://github.com/vercel/next.js/discussions/18485#discussioncomment-3731075
+See the [NextJS internationalized routing discussion](https://github.com/vercel/next.js/discussions/18485#discussioncomment-3731075) on GitHub.
 
-This is an attempt to have the same functionality as NuxtJS i18n configs, but with NextJS `serverRuntimeConfig` rewrites instead.
+This is an attempt to have the same functionality as NuxtJS i18n configs as discussed in the discussion above.
 
-## Ideas
+## Why?
 
-### Need to try
+Next.js is great, but the best way to approach full URL i18n was not clear. I'm not sure if the approach of this demo is, but it certainly seems better than what I previously attempted using [Optional Catch-All Routes](https://github.com/EddyVinck/nextjs-translated-paths-demo).
 
-❓ Middleware
+## Working solution: using middleware + rewrites
 
-### Don't work
+Each page template has a separate file.
 
-❌ `serverRuntimeConfig` rewrites don't work
+In `/middleware.ts` we dynamically get a rewrites configuration from a (simulated) backend. If the requested pathname is in the rewrites, we pick what page template to use by rewriting to that path.
+
+In the page template files, you would need to call to your backend or CMS to get the relevant data for that page.
+
+Relevant Next.js documentation:
+
+- [Middleware](https://nextjs.org/docs/advanced-features/middleware)
+- [Rewrites](https://nextjs.org/docs/api-reference/next.config.js/rewrites)
+
+## What's not in this demo
+
+- Dynamic routes
+
+## Ideas that have been tried
+
+### Works
+
+- ✅ Middleware + rewrites
+- ✅ [A single Optional Catch-All Route page than handles everything](https://github.com/EddyVinck/nextjs-translated-paths-demo)
+
+### Didn't work
+
+- ❌ `serverRuntimeConfig` rewrites don't work
 
 ## NuxtJS example
+
+This is the example configuration of NuxtJS that was attempted to be replicated in this demo.
+
+In this demo, the structure is not exactly the same, but the idea is the same: you define what URL pathnames correspond to what page template.
+
+You can find the configuration in `getRewritesFromBackend.ts`.
 
 ```js
 // nuxt.config.js

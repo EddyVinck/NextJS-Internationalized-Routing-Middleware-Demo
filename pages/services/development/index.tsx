@@ -1,8 +1,10 @@
 import { type GetServerSideProps } from "next";
 import Head from "next/head";
-import { Navbar } from "../components/Navbar";
+import { Navbar } from "../../../components/Navbar";
 
-export default function About(props: { locale: string | undefined }) {
+export default function ServicesDevelopment(props: {
+  locale: string | undefined;
+}) {
   return (
     <div>
       <Head>
@@ -14,7 +16,7 @@ export default function About(props: { locale: string | undefined }) {
       <Navbar />
 
       <main>
-        <h1>About page template</h1>
+        <h1>Services/Development template</h1>
         <p>Locale: {props.locale}</p>
       </main>
     </div>

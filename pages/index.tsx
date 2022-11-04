@@ -14,7 +14,7 @@ export default function Index(props: { locale: string | undefined }) {
       <Navbar />
 
       <main>
-        <h1>Index</h1>
+        <h1>Index page template</h1>
         <p>Locale: {props.locale}</p>
       </main>
     </div>

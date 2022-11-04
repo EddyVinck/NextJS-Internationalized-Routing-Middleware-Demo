@@ -26,17 +26,17 @@ const nextConfig = {
     locales: ["en", "fr", "nl"],
     defaultLocale: "en",
   },
-  // This works, but it can't be changed during runtime
-  async rewrites() {
-    return getRewrites();
-  },
+  // // This works, but it can't be changed during runtime
+  // async rewrites() {
+  //   return getRewrites();
+  // },
 
-  // This doesn't work at all, you get a 404
-  serverRuntimeConfig: {
-    async rewrites() {
-      return getRewrites();
-    },
-  },
+  // // This doesn't work at all, you get a 404
+  // serverRuntimeConfig: {
+  //   async rewrites() {
+  //     return getRewrites();
+  //   },
+  // },
 };
 
 module.exports = nextConfig;

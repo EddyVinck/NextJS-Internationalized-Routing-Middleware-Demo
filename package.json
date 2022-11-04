@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-runtime-config-i18n-rewrites",
+  "name": "nextjs-runtime-middleware-i18n-rewrites-demo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
