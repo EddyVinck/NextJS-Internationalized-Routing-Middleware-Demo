@@ -1,5 +1,7 @@
 # Next.js Internationalized Routing Middleware Demo
 
+> 🚀 **For Next.js' `app` directory (beta), see the newly released https://beta.nextjs.org/docs/guides/internationalization**
+
 See the [NextJS internationalized routing discussion](https://github.com/vercel/next.js/discussions/18485#discussioncomment-3731075) on GitHub.
 
 Demo deployed on Vercel: https://next-js-internationalized-routing-middleware-demo.vercel.app/
